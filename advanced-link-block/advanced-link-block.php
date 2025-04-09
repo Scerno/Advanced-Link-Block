@@ -1,0 +1,131 @@
+<?php
+
+/**
+ * The plugin bootstrap file
+ *
+ * This file is read by WordPress to generate the plugin information in the plugin
+ * admin area. This file also includes all of the dependencies used by the plugin,
+ * registers the activation and deactivation functions, and defines a function
+ * that starts the plugin.
+ *
+ * @link              https://https://scerno.com/author
+ * @since             1.0.0
+ * @package           Advanced_Link_Block
+ *
+ * @wordpress-plugin
+ * Plugin Name:       Advanced Link Block
+ * Plugin URI:        https://https://scerno.com
+ * Description:       Turn any existing block into a clickable link in Gutenberg, with advanced options and features including downloading, open in new tab, phone numbers, emails and more.
+ * Version:           1.0.0
+ * Author:            Scerno Visualise Ltd
+ * Author URI:        https://https://scerno.com/author/
+ * License:           GPL-2.0+
+ * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
+ * Text Domain:       advanced-link-block
+ * Domain Path:       /languages
+ */
+
+// If this file is called directly, abort.
+if ( ! defined( 'WPINC' ) ) {
+	die;
+}
+
+/**
+ * Currently plugin version.
+ * Start at version 1.0.0 and use SemVer - https://semver.org
+ * Rename this for your plugin and update it as you release new versions.
+ */
+define( 'ADVANCED_LINK_BLOCK_VERSION', '1.0.0' );
+
+/**
+ * The code that runs during plugin activation.
+ * This action is documented in includes/class-advanced-link-block-activator.php
+ */
+function activate_advanced_link_block() {
+	require_once plugin_dir_path( __FILE__ ) . 'includes/class-advanced-link-block-activator.php';
+	Advanced_Link_Block_Activator::activate();
+}
+
+/**
+ * The code that runs during plugin deactivation.
+ * This action is documented in includes/class-advanced-link-block-deactivator.php
+ */
+function deactivate_advanced_link_block() {
+	require_once plugin_dir_path( __FILE__ ) . 'includes/class-advanced-link-block-deactivator.php';
+	Advanced_Link_Block_Deactivator::deactivate();
+}
+
+register_activation_hook( __FILE__, 'activate_advanced_link_block' );
+register_deactivation_hook( __FILE__, 'deactivate_advanced_link_block' );
+
+/**
+ * The core plugin class that is used to define internationalization,
+ * admin-specific hooks, and public-facing site hooks.
+ */
+require plugin_dir_path( __FILE__ ) . 'includes/class-advanced-link-block.php';
+
+/**
+ * Begins execution of the plugin.
+ *
+ * Since everything within the plugin is registered via hooks,
+ * then kicking off the plugin from this point in the file does
+ * not affect the page life cycle.
+ *
+ * @since    1.0.0
+ */
+function run_advanced_link_block() {
+
+	$plugin = new Advanced_Link_Block();
+	$plugin->run();
+
+}
+run_advanced_link_block();
+
+
+
+defined( 'ABSPATH' ) || exit;
+
+function advanced_link_block_register_block() {
+	$block_dir = plugin_dir_path( __FILE__ ) . 'blocks/advanced-link/';
+
+	// Register editor JS
+	wp_register_script(
+		'advanced-link-block-editor',
+		plugins_url( 'blocks/advanced-link/edit.js', __FILE__ ),
+		[ 'wp-blocks', 'wp-element', 'wp-editor', 'wp-components', 'wp-i18n' ],
+		filemtime( $block_dir . 'edit.js' )
+	);
+
+	// Register frontend + save JS
+	wp_register_script(
+		'advanced-link-block-save',
+		plugins_url( 'blocks/advanced-link/save.js', __FILE__ ),
+		[ 'wp-blocks', 'wp-element', 'wp-editor' ],
+		filemtime( $block_dir . 'save.js' )
+	);
+
+	// Register styles
+	wp_register_style(
+		'advanced-link-block-style',
+		plugins_url( 'blocks/advanced-link/style.css', __FILE__ ),
+		[],
+		filemtime( $block_dir . 'style.css' )
+	);
+
+	wp_register_style(
+		'advanced-link-block-editor-style',
+		plugins_url( 'blocks/advanced-link/editor.css', __FILE__ ),
+		[],
+		filemtime( $block_dir . 'editor.css' )
+	);
+
+	// Register block using metadata (block.json)
+	register_block_type( $block_dir, [
+		'editor_script' => 'advanced-link-block-editor',
+		'script'        => 'advanced-link-block-save',
+		'style'         => 'advanced-link-block-style',
+		'editor_style'  => 'advanced-link-block-editor-style',
+	] );
+}
+add_action( 'init', 'advanced_link_block_register_block' );
+
