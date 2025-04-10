@@ -3,22 +3,22 @@ import { useBlockProps, InnerBlocks } from '@wordpress/block-editor';
 export default function save({ attributes }) {
 	const { linkType, url, target, rel, download, cursor, display } = attributes;
 
-	let finalHref = url;
-	if (linkType === 'email') finalHref = `mailto:${url}`;
-	else if (linkType === 'phone') finalHref = `tel:${url}`;
-
-	const props = {
-		href: finalHref,
-		target: target || undefined,
-		rel: rel || undefined,
-		download: download || undefined,
-	};
+	const blockProps = useBlockProps.save({
+		style: {
+			cursor: cursor || 'pointer',
+			display: display || 'block',
+		},
+		// You can also add a data-href here for fallback support
+		'data-href': url,
+		'data-download': download || undefined,
+		'data-target': target || undefined,
+		'data-rel': rel || undefined,
+	});
 
 	return (
-		<a {...useBlockProps.save({ style: { cursor: cursor || 'pointer', display: display || 'block' } })} {...props}>
-
-		
+		<div {...blockProps}>
 			<InnerBlocks.Content />
-		</a>
+		</div>
 	);
 }
+
