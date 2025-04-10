@@ -34,9 +34,9 @@ To use this plugin on your WordPress site:
 
 | Editor View | Sidebar Options |
 |-------------|-----------------|
-| ![Screenshot 1](https://raw.githubusercontent.com/Scerno/Advanced-Link-Block/main/assets/screenshot-1.jpg) | ![Screenshot 5](https://raw.githubusercontent.com/Scerno/Advanced-Link-Block/main/assets/screenshot-5.jpg) |
-| ![Screenshot 3](https://raw.githubusercontent.com/Scerno/Advanced-Link-Block/main/assets/screenshot-3.jpg) | ![Screenshot 6](https://raw.githubusercontent.com/Scerno/Advanced-Link-Block/main/assets/screenshot-6.jpg) |
-| ![Screenshot 2](https://raw.githubusercontent.com/Scerno/Advanced-Link-Block/main/assets/screenshot-2.jpg) | ![Screenshot 7](https://raw.githubusercontent.com/Scerno/Advanced-Link-Block/main/assets/screenshot-7.jpg) |
+| ![Screenshot 1](assets/screenshot-1.jpg) | ![Screenshot 5](https://raw.githubusercontent.com/Scerno/Advanced-Link-Block/main/assets/screenshot-5.jpg) |
+| ![Screenshot 3](assets/screenshot-3.jpg) | ![Screenshot 6](https://raw.githubusercontent.com/Scerno/Advanced-Link-Block/main/assets/screenshot-6.jpg) |
+| ![Screenshot 2](assets/screenshot-2.jpg) | ![Screenshot 7](https://raw.githubusercontent.com/Scerno/Advanced-Link-Block/main/assets/screenshot-7.jpg) |
 
 *See `/assets/` folder for full list of annotated screenshots.*
 
