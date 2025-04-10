@@ -8,17 +8,17 @@
  * registers the activation and deactivation functions, and defines a function
  * that starts the plugin.
  *
- * @link              https://scerno.com/author
+ * @link              https://scerno.com/
  * @since             1.0.0
  * @package           Advanced_Link_Block
  *
  * @wordpress-plugin
  * Plugin Name:       Advanced Link Block
- * Plugin URI:        https://scerno.com
+ * Plugin URI:        https://scerno.com/web-plugins/advanced-link-block-for-wordpress/
  * Description:       Turn any existing block into a clickable link in Gutenberg, with advanced options and features including downloading, open in new tab, phone numbers, emails and more.
  * Version:           1.1.0
  * Author:            Scerno Visualise Ltd
- * Author URI:        https://scerno.com/author/
+ * Author URI:        https://scerno.com/about/
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       advanced-link-block
