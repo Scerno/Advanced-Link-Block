@@ -3,8 +3,8 @@ Contributors: scernoltd
 Donate link: https://scerno.com
 Tags: block editor, gutenberg, anchor, link, download, phone, email
 Requires at least: 6.0
-Tested up to: 6.5
-Stable tag: trunk
+Tested up to: 6.7
+Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -67,7 +67,7 @@ Yes, the plugin uses standard HTML5 `<a>` tags and simulates wrapping behavior w
 
 == Changelog ==
 
-= 1.1.0 =
+= 1.2.0 =
 * Initial release
 * Supports all main link types: URL, Email, Phone, File, Raw
 * Custom link attributes: target, rel, download
@@ -75,8 +75,4 @@ Yes, the plugin uses standard HTML5 `<a>` tags and simulates wrapping behavior w
 * Frontend JS simulates anchor wrapping
 * Custom display and cursor styles
 
-== Upgrade Notice ==
-
-= 1.0.0 =
-Initial public release. Enables advanced link options in Gutenberg.
 
