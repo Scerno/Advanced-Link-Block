@@ -34,9 +34,9 @@ To use this plugin on your WordPress site:
 
 | Editor View | Sidebar Options |
 |-------------|-----------------|
-| ![Screenshot 1](https://github.com/Scerno/Advanced-Link-Block/blob/main/assets/screenshot-1.png) | ![Screenshot 5](https://raw.githubusercontent.com/Scerno/Advanced-Link-Block/main/assets/screenshot-5.jpg) |
-| ![Screenshot 3](https://raw.githubusercontent.com/Scerno/Advanced-Link-Block/blob/main/assets/screenshot-3.png) | ![Screenshot 6](https://raw.githubusercontent.com/Scerno/Advanced-Link-Block/main/assets/screenshot-6.jpg) |
-| ![Screenshot 2](assets/screenshot-2.jpg) | ![Screenshot 7](https://raw.githubusercontent.com/Scerno/Advanced-Link-Block/main/assets/screenshot-7.jpg) |
+| ![Screenshot 1](https://github.com/Scerno/Advanced-Link-Block/blob/main/assets/screenshot-1.png) | ![Screenshot 5](https://github.com/Scerno/Advanced-Link-Block/blob/main/assets/screenshot-5.png) |
+| ![Screenshot 3](https://github.com/Scerno/Advanced-Link-Block/blob/main/assets/screenshot-3.png) | ![Screenshot 6](https://github.com/Scerno/Advanced-Link-Block/blob/main/assets/screenshot-6.png) |
+| ![Screenshot 2](https://github.com/Scerno/Advanced-Link-Block/blob/main/assets/screenshot-2.png) | ![Screenshot 7](https://github.com/Scerno/Advanced-Link-Block/blob/main/assets/screenshot-7.png) |
 
 *See `/assets/` folder for full list of annotated screenshots.*
 
