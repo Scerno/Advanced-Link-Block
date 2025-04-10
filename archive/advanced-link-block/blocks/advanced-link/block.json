@@ -1,0 +1,36 @@
+{
+  "apiVersion": 2,
+  "name": "advanced-link-block/advanced-link",
+  "title": "Advanced Link",
+  "description": "Turn any existing block into a clickable link in Gutenberg, with advanced options and features including downloading, open in new tab, phone numbers, emails and more.",
+  "category": "common",
+  "icon": "admin-links",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "linkType": {
+      "type": "string",
+      "default": "url"
+    },
+    "url": {
+      "type": "string",
+      "default": ""
+    },
+    "target": {
+      "type": "string",
+      "default": ""
+    },
+    "rel": {
+      "type": "string",
+      "default": ""
+    },
+    "download": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "editorScript": "advanced-link-block-editor",
+  "editorStyle": "advanced-link-block-editor",
+  "style": "advanced-link-block"
+}

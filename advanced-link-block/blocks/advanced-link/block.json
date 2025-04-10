@@ -1,36 +1,21 @@
 {
-  "apiVersion": 2,
-  "name": "advanced-link-block/advanced-link",
-  "title": "Advanced Link",
-  "description": "Turn any existing block into a clickable link in Gutenberg, with advanced options and features including downloading, open in new tab, phone numbers, emails and more.",
-  "category": "common",
-  "icon": "admin-links",
-  "supports": {
-    "html": false
-  },
-  "attributes": {
-    "linkType": {
-      "type": "string",
-      "default": "url"
-    },
-    "url": {
-      "type": "string",
-      "default": ""
-    },
-    "target": {
-      "type": "string",
-      "default": ""
-    },
-    "rel": {
-      "type": "string",
-      "default": ""
-    },
-    "download": {
-      "type": "boolean",
-      "default": false
-    }
-  },
-  "editorScript": "advanced-link-block-editor",
-  "editorStyle": "advanced-link-block-editor",
-  "style": "advanced-link-block"
+	"apiVersion": 2,
+	"name": "advanced-link-block/advanced-link",
+	"title": "Advanced Link",
+	"description": "Turn any existing block into a clickable link in Gutenberg...",
+	"category": "common",
+	"icon": "admin-links",
+	"keywords": ["link", "anchor", "url", "advanced"],
+	"attributes": {
+		"linkType": { "type": "string", "default": "url" },
+		"url": { "type": "string", "default": "" },
+		"target": { "type": "string", "default": "" },
+		"rel": { "type": "string", "default": "" },
+		"download": { "type": "boolean", "default": false },
+		"cursor": { "type": "string", "default": "pointer" },
+		"display": { "type": "string", "default": "block" }
+	},
+	"editorScript": "file:../../build/index.js",
+	"style": "file:../../build/style-index.css",
+	"editorStyle": "file:../../build/index.css"
 }

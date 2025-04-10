@@ -1,0 +1,33 @@
+.wp-block-advanced-link-block-advanced-link {
+	display: block; // ← this fixes layout issues in the editor
+	padding: 5px;
+	border-radius: 0px;
+	outline-offset: 0;
+}
+
+// when not selected, dashed line in theme color shows
+.block-editor-block-list__block.wp-block-advanced-link-block-advanced-link {
+	outline: 1px dashed var(--theme-text-color);
+}
+
+// if not selected, and not empty, attempt to show faint grey line - doesnt work in firefox
+.block-editor-block-list__block.wp-block-advanced-link-block-advanced-link:has(.block-editor-inner-blocks .wp-block) {
+	/* Block has at least one child block inside */
+	outline: 1px solid #1e1e1e; // maybe dont show dashed outline
+}
+
+// when selected show solid line in admin color - often blue
+.block-editor-block-list__block.wp-block-advanced-link-block-advanced-link.is-selected {
+	outline: 2px solid var(--wp-admin-theme-color);
+}
+
+// show default text when empty
+.block-editor-block-list__block.wp-block-advanced-link-block-advanced-link:not(:has(.wp-block))::after {
+	content: "Type / to choose a block";
+	display: block;
+	pointer-events: none;
+	opacity: 0.62;
+	user-select: none;
+    -webkit-user-select: none;
+	-ms-user-select: none;
+}
