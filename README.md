@@ -5,6 +5,7 @@ A powerful custom Gutenberg block that turns **any block** into a clickable link
 Built to solve the limitations of WordPress’s default linking options, this block lets you **wrap blocks like buttons, groups, text, and even complex layouts** inside a single `<a>` tag — without breaking HTML validation or accessibility.
 
 Find out more on our website: https://scerno.com/web-plugins/advanced-link-block-for-wordpress/
+
 View stable plugin on WordPress: https://wordpress.org/plugins/advanced-link-block/
 
 ---
