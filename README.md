@@ -6,6 +6,8 @@ Built to solve the limitations of WordPress’s default linking options, this bl
 
 Find out more on our website: https://scerno.com/web-plugins/advanced-link-block-for-wordpress/
 
+View stable plugin on WordPress: https://wordpress.org/plugins/advanced-link-block/
+
 ---
 
 ## 🎯 Key Features
