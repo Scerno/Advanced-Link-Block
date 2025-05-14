@@ -1,0 +1,132 @@
+{
+  "sections": [
+    {
+      "id": "behaviour",
+      "title": "Link Behaviour",
+      "fields": {
+        "behaviour": {
+          "label": "Link Behaviour",
+          "type": "dropdown",
+          "choices": {
+            "default": {
+              "label": "Default",
+              "help": "Default currently maps to Auto. More advanced logic coming soon."
+            },
+            "auto": {
+              "label": "Auto",
+              "help": "Auto analyses the block and picks the safest native mode."
+            },
+            "js": {
+              "label": "JS Simulation",
+              "help": "Works everywhere but middle / right click are only emulated."
+            },
+            "wrap": {
+              "label": "HTML Anchor Injection",
+              "help": "Perfect native behaviour; falls back if nested <a> or <button> are found."
+            },
+            "float": {
+              "label": "Floating HTML Anchor",
+              "help": "Follows the mouse. Native feel – minor performance cost; falls back if interactive elements exist."
+            }
+          },
+          "default": "default"
+        }
+      }
+    },
+
+    {
+      "id": "settings",
+      "title": "Link Settings",
+      "fields": {
+        "linkType": {
+          "label": "Link Type",
+          "type": "dropdown",
+          "choices": {
+            "default": { "label": "Default" },
+            "url":     { "label": "URL" },
+            "mail":    { "label": "E-mail" },
+            "phone":   { "label": "Phone" },
+            "sms":     { "label": "SMS" },
+            "raw":     { "label": "Raw data" }
+          },
+          "default": "default"
+        },
+
+        "url": {
+          "label": "Link Value",
+          "type": "text",
+          "default": ""
+        },
+
+        "target": {
+          "label": "Target",
+          "type": "dropdown",
+          "choices": {
+            "default": { "label": "Default" },
+            "none":    { "label": "None (omit target)" },
+            "_blank":  { "label": "New Tab (_blank)" },
+            "_self":   { "label": "Same Tab (_self)" }
+          },
+          "default": "default"
+        },
+
+        "rel": {
+          "label": "Rel Attribute",
+          "type": "dropdown",
+          "choices": {
+            "default":   { "label": "Default" },
+            "none":      { "label": "None (omit rel)" },
+            "noopener":  { "label": "noopener" },
+            "noreferrer":{ "label": "noreferrer" },
+            "nofollow":  { "label": "nofollow" }
+          },
+          "default": "default"
+        },
+
+        "download": {
+          "label": "Download Behaviour",
+          "type": "dropdown",
+          "choices": {
+            "default":  { "label": "Default" },
+            "none":     { "label": "None (omit download)" },
+            "download": { "label": "Download Attribute" },
+            "force":    { "label": "Force Download" }
+          },
+          "default": "default"
+        }
+      }
+    },
+
+    {
+      "id": "style",
+      "title": "Link Style",
+      "fields": {
+        "display": {
+          "label": "Display",
+          "type": "dropdown",
+          "choices": {
+            "default":  { "label": "Default" },
+            "block":    { "label": "Block" },
+            "contents": { "label": "Contents" },
+            "flex":     { "label": "Flex" }
+          },
+          "default": "default"
+        },
+
+        "cursor": {
+          "label": "Cursor",
+          "type": "dropdown",
+          "choices": {
+            "default":   { "label": "Default" },
+            "pointer":   { "label": "Pointer" },
+            "crosshair": { "label": "Crosshair" },
+            "grab":      { "label": "Grab" },
+            "text":      { "label": "Text" },
+            "wait":      { "label": "Wait" }
+          },
+          "default": "default"
+        }
+      }
+    }
+  ]
+}

@@ -37,8 +37,18 @@ const LINK_OPTIONS = {
 	},
 };
 
+// show unique behaviour message depending on chosen method
+const BEHAVIOUR_MSG = {
+	default: 'Default currently maps to Auto. More advanced logic coming soon.',
+	auto   : 'Auto will analyse the block contents and pick the safest native mode.',
+	js     : 'JS simulation works everywhere but middle / right click are only emulated.',
+	wrap   : 'HTML Anchor Injection gives perfect native behaviour, but will fall back if nested <a> or <button> elements are detected.',
+	float  : 'Floating anchor follows the mouse. Great native feel, minor performance cost; will fall back if interactive elements are found.',
+};
+
+
 export default function Edit({ attributes, setAttributes }) {
-	const { linkType, url, target, rel, download, cursor, display } = attributes;
+	const { linkType, url, target, rel, download, cursor, display, behaviour } = attributes;
 
 	const showWarning = linkType !== 'url' && download;
 
@@ -58,6 +68,23 @@ export default function Edit({ attributes, setAttributes }) {
 	return (
 		<Fragment>
 			<InspectorControls>
+				<PanelBody title="Behaviour" initialOpen={true}>
+					<SelectControl
+						label="Link Behaviour"
+						value={behaviour}
+						options={[
+							{ label: 'Default (auto)', value: 'default' },
+							{ label: 'Auto', value: 'auto' },
+							{ label: 'JS Simulation', value: 'js' },
+							{ label: 'HTML Anchor Injection', value: 'wrap' },
+							{ label: 'Floating HTML Anchor', value: 'float' },
+						]}
+						onChange={(val) => setAttributes({ behaviour: val })}
+					/>
+					<Notice status="info" isDismissible={false}>
+						{ BEHAVIOUR_MSG[ behaviour === 'default' ? 'default' : behaviour ] }
+					</Notice>
+				</PanelBody>
 				<PanelBody title="Link Settings">
 					<SelectControl
 						label={LINK_OPTIONS.type.label}

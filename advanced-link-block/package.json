@@ -1,12 +1,14 @@
 {
   "name": "advanced-link-block",
-  "version": "1.2.1",
+  "version": "1.3.1",
   "description": "Advanced Gutenberg anchor wrapper block with flexible link options.",
   "scripts": {
     "start": "wp-scripts start",
-    "build": "wp-scripts build"
+    "build": "wp-scripts build",
+    "postbuild": "shx cp src/config/albSchema.json build/albSchema.json"
   },
   "devDependencies": {
-    "@wordpress/scripts": "^26.0.0"
+    "@wordpress/scripts": "^26.0.0",
+    "shx": "^0.3.4"
   }
 }

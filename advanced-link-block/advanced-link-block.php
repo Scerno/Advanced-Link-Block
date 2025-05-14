@@ -16,17 +16,20 @@
  * Plugin Name:       Advanced Link Block
  * Plugin URI:        https://scerno.com/web-plugins/advanced-link-block-for-wordpress/
  * Description:       Turn any existing block into a clickable link in Gutenberg, with advanced options and features including downloading, open in new tab, phone numbers, emails and more.
- * Version:           1.2.1
+ * Version:           1.3.1
  * Author:            Scerno Visualise Ltd
  * Author URI:        https://scerno.com/about/
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       advanced-link-block
- * Domain Path:       /languages
  */
 
 
 defined( 'ABSPATH' ) || exit;
+
+// include the admin page functionality
+require_once plugin_dir_path( __FILE__ ) . 'includes/class-alb-admin.php';
+
 
 // Run the main function to register the block
 function advanced_link_block_register_block() {

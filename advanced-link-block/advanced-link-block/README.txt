@@ -4,7 +4,7 @@ Donate link: https://scerno.com
 Tags: block editor, gutenberg, anchor, link, download
 Requires at least: 6.0
 Tested up to: 6.8
-Stable tag: 1.2.1
+Stable tag: 1.3.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -74,5 +74,12 @@ Yes, the plugin uses standard HTML5 `<a>` tags and simulates wrapping behavior w
 * File picker integration
 * Frontend JS simulates anchor wrapping
 * Custom display and cursor styles
+
+= 1.3.0 =
+* Added support for middle click
+* Added right click support
+* Added a Behaviours option to allow user to select how they want the link to functional
+* Added JS fallback behaviour for extra robustness
+* Added options notest to clarify the impact of different options
 
 
